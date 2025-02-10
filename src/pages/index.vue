@@ -2,45 +2,20 @@
 defineOptions({
   name: 'IndexPage',
 })
-
-const name = ref('')
-
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
 </script>
 
 <template>
-  <div>
-    <div i-carbon-campsite inline-block text-4xl />
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu-collective/vitesse-lite" target="_blank">
-        Vitesse Lite
-      </a>
-    </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
-    </p>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      placeholder="What's your name?"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-
-    <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
-        Go
-      </button>
+  <div class="h-lg w-5xl flex overflow-hidden rounded-3xl bg-blue pb-1 pr-1 pt-1">
+    <div class="w-12 bg-blue" />
+    <div class="flex flex-1 flex-col overflow-hidden rounded-3xl bg-amber">
+      <div class="h-12 bg-emerald" />
+      <div class="w-full flex flex-1 bg-coolGray">
+        <div class="w-48" />
+        <div class="flex flex-1 flex-col bg-dark">
+          <div class="h-12" />
+          <div />
+        </div>
+      </div>
     </div>
   </div>
 </template>
